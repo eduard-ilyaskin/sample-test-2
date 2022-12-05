@@ -13,6 +13,12 @@ export function Result() {
     }
   }, [metaData]);
 
+  useEffect(() => {
+    return () => {
+      hunting.clearMetaDataCache();
+    };
+  }, []);
+
   function calculateInputsAVG(inputs) {
     return Object.keys(inputs).reduce((acc, key) => inputs[key].timeSpend + acc, 0);
   }

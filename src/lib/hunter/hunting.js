@@ -79,6 +79,10 @@ export class Hunting {
     this._setPageParams(this._currentLocation.pathname, { data });
   }
 
+  clearCache() {
+    localStorage.removeItem('hunting-data');
+  }
+
   _onPageTimerChange() {
     if (!this._currentLocation) {
       return;

@@ -12,6 +12,7 @@ const HuntingContext = createContext({
   setPage: () => {},
   getInstance: () => {},
   getMetaData: () => {},
+  clearMetaDataCache: () => {},
 });
 
 export function HuntingProvider({ instance: instanceProp, children }) {
@@ -20,10 +21,11 @@ export function HuntingProvider({ instance: instanceProp, children }) {
   const getInstance = useCallback(() => instance, [instance]);
   const setPage = useCallback((location) => instance.setPage(location), [instance]);
   const getMetaData = useCallback(() => instance.getAllMetaData(), [instance]);
+  const clearMetaDataCache = useCallback(() => instance.clearCache(), [instance]);
 
   const value = useMemo(
-    () => ({ setPage, getInstance, getMetaData }),
-    [setPage, getInstance, getMetaData]
+    () => ({ setPage, getInstance, getMetaData, clearMetaDataCache }),
+    [setPage, getInstance, getMetaData, clearMetaDataCache]
   );
   return <HuntingContext.Provider value={value}>{children}</HuntingContext.Provider>;
 }
