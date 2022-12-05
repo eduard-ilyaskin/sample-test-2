@@ -1,0 +1,1 @@
+export { FormHuntingPlugin } from './form';

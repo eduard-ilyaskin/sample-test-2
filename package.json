@@ -1,0 +1,24 @@
+{
+  "name": "sample-test-analys",
+  "version": "1.0.0",
+  "description": "This test is focused on analyzing and collecting alternative user data",
+  "source": "index.html",
+  "browserslist": "last 2 years, > 1%, not dead",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "author": "Eduard Ilyaskin",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.8.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "@swc/helpers": "^0.4.14",
+    "history": "^5.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.4"
+  }
+}
